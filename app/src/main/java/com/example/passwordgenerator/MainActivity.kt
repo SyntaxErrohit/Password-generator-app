@@ -1,14 +1,18 @@
 package com.example.passwordgenerator
 
-import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -52,7 +56,11 @@ class MainActivity : AppCompatActivity() {
                     if (numbers) metCondn = hasNum
                     if (splChars) metCondn = metCondn and hasSpl
                 }
-                passwd.text = password
+                passwd.text = "$password\nClick to copy password"
+                passwd.setOnClickListener {
+                    val myClipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+                    myClipboard.setPrimaryClip(ClipData.newPlainText("text", password))
+                }
             }
         }
     }
