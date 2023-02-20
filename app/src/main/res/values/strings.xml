@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Password generator</string>
+    <string name="has_numbers">Has numbers</string>
+    <string name="has_special_characters">Has special characters</string>
+    <string name="enter_minimum_length">Enter minimum length</string>
+    <string name="passwd" />
+    <string name="generate">Generate</string>
+</resources>

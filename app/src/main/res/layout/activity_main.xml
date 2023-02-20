@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/length"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="80sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_minimum_length"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/has_numbers"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="60sp"
+        android:text="@string/has_numbers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/length" />
+
+    <CheckBox
+        android:id="@+id/has_spl"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:text="@string/has_special_characters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/has_numbers" />
+
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65sp"
+        android:text="@string/generate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/has_spl" />
+
+    <TextView
+        android:id="@+id/passwd"
+        android:layout_width="250sp"
+        android:layout_height="80sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
